@@ -1,0 +1,60 @@
+{{extend 'layout.html'}}
+<h1>Najnowsze posty</h1>
+<div class="image-grid">
+    {{for image in latest_images:}}
+    <div class="image-thumbnail">
+        <a href="{{=URL('show', args=image.id)}}">
+            <img src="{{=URL('default', 'download', args=image.file)}}" alt="{{=image.title}}">
+            <p class="image-title">{{=image.title}}</p> <!-- Tytuł posta wewnątrz obrazka -->
+        </a>
+    </div>
+    {{pass}}
+</div>
+
+<h1>Aktualności</h1>
+<div class="image-grid">
+    {{for post in news_posts:}}
+    <div class="image-thumbnail">
+        <a href="{{=URL('show', args=post.id)}}">
+            <img src="{{=URL('default', 'download', args=post.file)}}" alt="{{=post.title}}">
+            <p class="image-title">{{=post.title}}</p> <!-- Tytuł posta wewnątrz obrazka -->
+        </a>
+    </div>
+    {{pass}}
+</div>
+
+<h1>Modele</h1>
+<div class="image-grid">
+    {{for post in model_posts:}}
+    <div class="image-thumbnail">
+        <a href="{{=URL('show', args=post.id)}}">
+            <img src="{{=URL('default', 'download', args=post.file)}}" alt="{{=post.title}}">
+            <p class="image-title">{{=post.title}}</p> <!-- Tytuł posta wewnątrz obrazka -->
+        </a>
+    </div>
+    {{pass}}
+</div>
+
+<h1>Porady</h1>
+<div class="image-grid">
+    {{for post in advice_posts:}}
+    <div class="image-thumbnail">
+        <a href="{{=URL('show', args=post.id)}}">
+            <img src="{{=URL('default', 'download', args=post.file)}}" alt="{{=post.title}}">
+            <p class="image-title">{{=post.title}}</p> <!-- Tytuł posta wewnątrz obrazka -->
+        </a>
+    </div>
+    {{pass}}
+</div>
+
+<h1>Przepisy drogowe</h1>
+<div class="image-grid">
+    {{for post in traffic_regulations_posts:}}
+    <div class="image-thumbnail">
+        <a href="{{=URL('show', args=post.id)}}">
+            <img src="{{=URL('default', 'download', args=post.file)}}" alt="{{=post.title}}">
+            <p class="image-title">{{=post.title}}</p> <!-- Tytuł posta wewnątrz obrazka -->
+        </a>
+    </div>
+    {{pass}}
+</div>
